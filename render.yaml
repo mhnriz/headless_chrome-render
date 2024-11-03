@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: chrome-headless-extension
+    env: node
+    plan: free  # or another plan based on your resource needs
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_ENV
+        value: production
