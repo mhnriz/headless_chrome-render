@@ -1,10 +1,10 @@
 services:
   - type: web
-    name: chrome-headless-extension
-    env: node
-    plan: free  # or another plan based on your resource needs
-    buildCommand: "npm install"
-    startCommand: "npm start"
+    name: python-chrome-extension
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
     envVars:
       - key: NODE_ENV
         value: production
